@@ -22,7 +22,7 @@ function storeAllTrips(data) {
       allTrips.push({
         id: trip.id,
         title: trip.title,
-        stops: trip.stops.map(stop => ({ locality: stop.locality }))
+        stops: trip.stops.map(stop => ({ locality: stop.locality, images: stop.images }))
       });
     }
   }
@@ -58,5 +58,5 @@ function main(jsonFileName) {
 }
 
 // Replace 'your_json_file.json' with the actual path to your JSON file
-const jsonFileName = './data/popular/last-trips.json';
+const jsonFileName = './raw/last-trips.json';
 main(jsonFileName);
