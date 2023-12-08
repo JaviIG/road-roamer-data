@@ -22,7 +22,10 @@ function storeAllTrips(data) {
       allTrips.push({
         id: trip.id,
         title: trip.title,
-        stops: trip.stops.map(stop => ({ locality: stop.locality, images: stop.images }))
+        stops: Object.values(trip.stops).sort((a, b) => a.order - b.order).map(stop => ({
+          locality: stop.locality,
+          images: stop.images
+        }))
       });
     }
   }
