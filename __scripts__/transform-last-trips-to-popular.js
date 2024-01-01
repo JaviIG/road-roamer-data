@@ -6,13 +6,6 @@ function readJsonFile(filename) {
   return JSON.parse(data);
 }
 
-// Function to transform data into an array of { id, title }
-function transformData(data) {
-
-
-  return tripsArray;
-}
-
 function storeAllTrips(data) {
   const allTrips = [];
 
